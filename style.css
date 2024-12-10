@@ -134,6 +134,7 @@ nav ul li a:hover {
   display: inline-block;
   margin-top: 20px;
   text-decoration: none;
+  text-align: center;
   color: #990000; /* USC Cardinal color */
   font-weight: bold;
   transition: color 0.3s ease;
