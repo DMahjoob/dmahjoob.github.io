@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Darius Mahjoob - Experience</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -22,9 +23,14 @@
   <main>
     <!-- About Section -->
     <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm Darius Mahjoob, a Computer Science & Business Administration major at USC. 
-      I have a passion for AI, data analysis, cryptography, and jazz music. Welcome to my personal website!</p>
+      <div class="about-container">
+        <img src="headshot.jpg" alt="Darius Mahjoob" class="headshot">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>Hello! I'm Darius Mahjoob, a Computer Science & Business Administration major at USC. 
+          I have a passion for AI, data analysis, cryptography, and jazz music. Welcome to my personal website!</p>
+        </div>
+      </div>
     </section>
 
     <!-- Experience Section -->
@@ -34,16 +40,18 @@
         <h3>Teaching Assistant</h3>
         <h4>University of Southern California</h4>
         <p><em>November 2024 - May 2025</em></p>
-        <p><em>Courses:</em> ITP 365, ITP 259, ENGR102 - Managing Data in C++, Basics of Artificial Intelligence, Freshman Academy </br >
-          Administrate labs, assist students during office hours, grade labs/assignments, mentor students on AI Model Development, Data Structures & Abstract Data Types, and Graph Traversal Algorithms.</p>
+        <p>
+          <em>Courses:</em> ITP 365, ITP 259, ENGR102 - Managing Data in C++, Basics of Artificial Intelligence, Freshman Academy.<br>
+          Administrate labs, assist students during office hours, grade labs/assignments, mentor students on AI Model Development, Data Structures & Abstract Data Types, and Graph Traversal Algorithms.
+        </p>
       </div>
       <div class="experience-item">
         <h3>Prompt Engineering Intern</h3>
-        <h4>Captis Intelligence </h4>
-        <p><em>May 2023 - August 2023</em></p>
+        <h4>Captis Intelligence</h4>
+        <p><em>May 2024 - August 2024</em></p>
         <p>Develop a chatbot to enhance query efficiency and accuracy by 25% within the Captis database. Adapt a pre-trained LLM to generate optimized SQL queries from a dataset exceeding 5 million prompts.</p>
       </div>
-      <div class = "experience-item">
+      <div class="experience-item">
         <h4>You can view my <a href="resume.pdf" target="_blank">full resume here</a> for more details about my professional and leadership experience.</h4>
       </div>
     </section>
@@ -51,15 +59,19 @@
     <!-- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
-      <div class="project-item">
-        <h3>AI Stock Predictor - Flask App</h3>
-        <p>A linear regression model to predict stock price trends and forecast future prices using historical data from Yahoo Finance. This program takes in a user's desired company's ticker symbol and a specified time period and graphs the projected price trends.<br>
-           <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Project Link</a></p>
-      </div>
-      <div class="project-item">
-        <h3>Lunch Buddies! - BERT Transformer</h3>
-        <p>A BERT Transformer model to match responses with the highest similarity score, taking any google forms data as input. This project was designed for Avenues Consutling Group to assimilate new cohort members into the club!<br>
-         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Project Link</a></p>
+      <div class="projects-container">
+        <div class="project-icon">
+          <i class="fas fa-chart-line"></i>
+          <p>AI Stock Predictor</p>
+          <p>A linear regression model to predict stock price trends using historical data.<br>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Project Link</a></p>
+        </div>
+        <div class="project-icon">
+          <i class="fas fa-brain"></i>
+          <p>Lunch Buddies!</p>
+          <p>A BERT Transformer model to match responses with the highest similarity score.<br>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Project Link</a></p>
+        </div>
       </div>
     </section>
 
