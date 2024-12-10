@@ -15,7 +15,7 @@ body {
 
 /* Header navigation styles */
 header {
-  background: #333;
+  background: #990000; /* USC Cardinal Red */
   color: #fff;
   padding: 10px 0;
   text-align: center;
@@ -39,7 +39,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #f39c12;
+  color: #fbc02d; /* A golden-yellow accent */
 }
 
 /* Section Styling */
@@ -55,17 +55,25 @@ section {
 section h1 {
   margin-bottom: 10px;
   font-size: 24px;
-  color: #333;
+  color: #990000; /* USC Cardinal Red */
 }
 
 /* Footer Styling */
 footer {
   text-align: center;
   padding: 10px 0;
-  background: #333;
+  background: #990000; /* USC Cardinal Red */
   color: #fff;
   font-size: 14px;
   margin-top: 20px;
+}
+
+/* Resume Preview iframe */
+iframe {
+  margin: 20px 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #990000; /* USC Cardinal Red */
+  border-radius: 4px;
 }
 
 /* Responsive Design */
