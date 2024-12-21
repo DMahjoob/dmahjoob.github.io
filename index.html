@@ -12,46 +12,43 @@
   <style>
     /* Keep everything else the same, only changing the Projects styling */
 
-    /* Projects Section */
+    /* Projects Section Container */
     .projects-container {
-      /* Use Flexbox to keep them all in one line */
       display: flex;
-      flex-wrap: nowrap; /* Prevent wrapping */
-      gap: 20px;
+      flex-wrap: nowrap;              /* Keep circles in a single row */
+      gap: 40px;                      /* Increase the space between circles */
       margin-top: 20px;
-      justify-content: center; /* Center them horizontally */
+      justify-content: center;        /* Center horizontally */
       align-items: center;
-      overflow-x: auto; /* Allows horizontal scroll if the screen is too small */
+      overflow-x: auto;               /* Allows horizontal scroll on smaller screens */
+      padding: 2rem 0;                /* Extra vertical padding to prevent clipping */
     }
-
-    /* Turn each project into a clickable circle */
+    
+    /* Project Circles */
     .project-icon {
-      /* Make it an anchor so the entire circle is clickable */
-      display: inline-flex; 
+      display: inline-flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
-      /* Circle dimensions */
-      width: 200px;
-      height: 200px;
+    
+      /* Larger width/height for bigger circles */
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
-
+      
       color: #fff;
       text-align: center;
-      text-decoration: none; /* Remove link underline */
-
-      /* Spacing inside the circle */
-      padding: 20px;
-
+      text-decoration: none;          /* Remove link underline */
+      
       /* Transition for hover effect */
       transition: transform 0.3s;
     }
-
+    
+    /* Hover to Enlarge */
     .project-icon:hover {
-      /* Grows slightly on hover */
       transform: scale(1.1);
     }
+    
 
     .project-icon i {
       font-size: 3rem;
