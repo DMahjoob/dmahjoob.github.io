@@ -15,52 +15,46 @@
     /* Projects Section Container */
     .projects-container {
       display: flex;
-      flex-wrap: nowrap;              /* Keep circles in a single row */
-      gap: 30px;                      /* Increase the space between circles */
+      flex-direction: column;
+      gap: 30px;                      /* Increase the space between project boxes */
       margin-top: 40px;
-      justify-content: center;        /* Center horizontally */
       align-items: center;
-      overflow-x: auto;               /* Allows horizontal scroll on smaller screens */
-      padding: 1rem 0;                /* Extra vertical padding to prevent clipping */
     }
-    
-    /* Project Circles */
-    .project-icon {
-      display: inline-flex;
+
+    /* Project Box */
+    .project-box {
+      display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-    
-      /* Larger width/height for bigger circles */
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      
-      color: #fff;
+      width: 80%;
+      max-width: 800px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
       text-align: center;
-      text-decoration: none;          /* Remove link underline */
-      
-      /* Transition for hover effect */
-      transition: transform 0.3s;
     }
-    
-    /* Hover to Enlarge */
-    .project-icon:hover {
-      transform: scale(1.1);
-    }
-    
 
-    .project-icon i {
+    /* Project Icon */
+    .project-box i {
       font-size: 3rem;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
+      color: #4caf50;
     }
 
-    /* Color classes remain as is */
-    .project-1 { background-color: #4caf50; } /* Green */
-    .project-2 { background-color: #2196f3; } /* Blue */
-    .project-3 { background-color: #9c27b0; } /* Purple */
-    .project-4 { background-color: #ff5722; } /* Orange */
-    .project-5 { background-color: #ffc107; } /* Yellow */
+    /* Project Title */
+    .project-box h3 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    /* Project Description */
+    .project-box p {
+      font-size: 1rem;
+      color: #666;
+    }
   </style>
 </head>
 <body>
@@ -135,51 +129,31 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects-container">
-        <!-- Make the entire circle an anchor so it's clickable anywhere -->
-        <a
-          href="https://dmahjoob.pythonanywhere.com/"
-          class="project-icon project-1"
-          target="_blank"
-        >
+        <div class="project-box">
           <i class="fas fa-chart-line"></i>
-          <p>ML Stock Predictor</p>
-        </a>
-
-        <a
-          href="https://github.com/DMahjoob/AvenuesConsultingProjects/tree/main/Lunch%20Buddies"
-          class="project-icon project-2"
-          target="_blank"
-        >
+          <h3>ML Stock Predictor</h3>
+          <p>Project #1 Description</p>
+        </div>
+        <div class="project-box">
           <i class="fas fa-hamburger" style="color: #fcd703;"></i>
-          <p>Lunch Buddies!</p>
-        </a>
-
-        <a
-          href="https://www.rebornevo.com/deso/index.php/"
-          class="project-icon project-3"
-          target="_blank"
-        >
+          <h3>Lunch Buddies!</h3>
+          <p>Project #2 Description</p>
+        </div>
+        <div class="project-box">
           <i class="fas fa-dragon" style="color: #ff4d4d;"></i>
-          <p>Pokemon Desolation</p>
-        </a>
-
-        <a
-          href="https://www.rebornevo.com/forums/topic/58037-pokemon-azure-act-2-is-out/"
-          class="project-icon project-4"
-          target="_blank"
-        >
+          <h3>Pokemon Desolation</h3>
+          <p>Project #3 Description</p>
+        </div>
+        <div class="project-box">
           <i class="fas fa-bolt" style="color: #fcd703;"></i>
-          <p>Pokemon Azure</p>
-        </a>
-
-        <a
-          href="https://github.com/DMahjoob/SecurityRiskDetector"
-          class="project-icon project-5"
-          target="_blank"
-        >
+          <h3>Pokemon Azure</h3>
+          <p>Project #4 Description</p>
+        </div>
+        <div class="project-box">
           <i class="fas fa-code"></i>
-          <p>AI Security Risk Detector</p>
-        </a>
+          <h3>AI Security Risk Detector</h3>
+          <p>Project #5 Description</p>
+        </div>
       </div>
     </section>
 
