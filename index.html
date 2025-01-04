@@ -13,10 +13,12 @@
     /* Projects Section Container */
     .projects-container {
       display: flex;
-      flex-direction: column;
-      gap: 30px;                      /* Increase the space between project boxes */
-      margin-top: 40px;
-      align-items: center;
+      flex-wrap: wrap; /* Allow wrapping for responsiveness */
+      justify-content: center; /* Horizontally center the content */
+      align-items: center; /* Vertically center the content */
+      gap: 30px; /* Maintain spacing between project boxes */
+      width: 100%; /* Ensure it spans the available space */
+      margin: 0 auto; /* Center the container itself */
     }
 
     /* Project Box */
