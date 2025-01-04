@@ -10,13 +10,22 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
   />
   <style>
-    /* Projects Section Container */
+    /* General Styling for Consistency */
+    section {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Projects Section Styling */
     .projects-container {
       display: flex;
-      flex-direction: column;
-      gap: 30px;                      /* Increase the space between project boxes */
-      margin-top: 40px;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
     /* Project Box */
