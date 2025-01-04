@@ -89,12 +89,12 @@ nav ul li a:hover {
 
 .projects-container {
   display: flex;
-  flex-wrap: wrap; /* Ensure wrapping for responsiveness */
-  justify-content: center; /* Horizontally center the projects */
-  gap: 30px; /* Spacing between project boxes */
-  width: 100%; /* Ensure it spans the available space */
-  max-width: 1200px; /* Optional: Limit max width for better aesthetics */
-  margin: auto; /* Center the container within its parent */
+  flex-wrap: wrap; /* Allows wrapping for responsiveness */
+  justify-content: center; /* Horizontally align the project containers */
+  align-items: center; /* Vertically center within the parent */
+  gap: 20px; /* Spacing between containers */
+  width: 780px; /* Ensures the entire container has a fixed width */
+  margin: 0 auto; /* Centers the container horizontally */
 }
 
 .project-icon {
