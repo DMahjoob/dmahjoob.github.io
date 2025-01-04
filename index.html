@@ -11,11 +11,16 @@
   />
   <style>
     /* General Styling for Consistency */
+    body {
+      background: url('image.png') no-repeat center center fixed;
+      background-size: cover; /* Ensure the image covers the entire viewport */
+    }
+
     section {
       margin: 20px auto;
       padding: 20px;
       max-width: 800px;
-      background: white;
+      background: rgba(255, 255, 255, 0.9); /* Slight transparency for readability */
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -23,28 +28,24 @@
     /* Projects Section Styling */
     .projects-container {
       display: flex;
-      flex-wrap: wrap; /* Allow wrapping for responsiveness */
-      justify-content: center; /* Horizontally center the project boxes */
-      align-items: center; /* Vertically center the project boxes */
-      gap: 20px; /* Add spacing between the project boxes */
-      width: 780; /* Ensure the container spans the full width */
-      margin: 0 auto; /* Center the container within the section */
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
-    
-    /* Project Box */
+
     .project-box {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 96%;
-      max-width: 800px;
+      width: 98%; /* Fixed width for uniform size */
+      padding: 20px;
+      background: rgba(245, 245, 245, 0.9); /* Slight transparency for readability */
       border: 1px solid #ddd;
       border-radius: 10px;
-      padding: 20px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      color: #fff;
+      color: #333;
       text-align: center;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
     }
 
     /* Hover to Enlarge */
