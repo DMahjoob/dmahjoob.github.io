@@ -32,29 +32,39 @@
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
+      color: #fff;
       text-align: center;
+      transition: transform 0.3s;
+    }
+
+    /* Hover to Enlarge */
+    .project-box:hover {
+      transform: scale(1.1);
     }
 
     /* Project Icon */
     .project-box i {
       font-size: 3rem;
       margin-bottom: 15px;
-      color: #4caf50;
     }
 
     /* Project Title */
     .project-box h3 {
       margin-bottom: 10px;
       font-size: 1.5rem;
-      color: #333;
     }
 
     /* Project Description */
     .project-box p {
       font-size: 1rem;
-      color: #666;
     }
+
+    /* Color Classes */
+    .project-1 { background-color: #4caf50; } /* Green */
+    .project-2 { background-color: #2196f3; } /* Blue */
+    .project-3 { background-color: #9c27b0; } /* Purple */
+    .project-4 { background-color: #ff5722; } /* Orange */
+    .project-5 { background-color: #ffc107; } /* Yellow */
   </style>
 </head>
 <body>
@@ -129,27 +139,27 @@
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects-container">
-        <div class="project-box">
+        <div class="project-box project-1">
           <i class="fas fa-chart-line"></i>
           <h3>ML Stock Predictor</h3>
           <p>Project #1 Description</p>
         </div>
-        <div class="project-box">
-          <i class="fas fa-hamburger" style="color: #fcd703;"></i>
+        <div class="project-box project-2">
+          <i class="fas fa-hamburger"></i>
           <h3>Lunch Buddies!</h3>
           <p>Project #2 Description</p>
         </div>
-        <div class="project-box">
-          <i class="fas fa-dragon" style="color: #ff4d4d;"></i>
+        <div class="project-box project-3">
+          <i class="fas fa-dragon"></i>
           <h3>Pokemon Desolation</h3>
           <p>Project #3 Description</p>
         </div>
-        <div class="project-box">
-          <i class="fas fa-bolt" style="color: #fcd703;"></i>
+        <div class="project-box project-4">
+          <i class="fas fa-bolt"></i>
           <h3>Pokemon Azure</h3>
           <p>Project #4 Description</p>
         </div>
-        <div class="project-box">
+        <div class="project-box project-5">
           <i class="fas fa-code"></i>
           <h3>AI Security Risk Detector</h3>
           <p>Project #5 Description</p>
