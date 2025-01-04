@@ -81,19 +81,20 @@ nav ul li a:hover {
 
 /* Projects Section */
 #projects {
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* Center the projects horizontally */
+  align-items: center; /* Center the projects vertically */
+  flex-direction: column;
 }
 
 .projects-container {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Ensure wrapping for responsiveness */
+  justify-content: center; /* Horizontally center the projects */
+  gap: 30px; /* Spacing between project boxes */
+  width: 100%; /* Ensure it spans the available space */
+  max-width: 1200px; /* Optional: Limit max width for better aesthetics */
+  margin: auto; /* Center the container within its parent */
 }
 
 .project-icon {
