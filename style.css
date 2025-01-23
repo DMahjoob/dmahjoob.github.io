@@ -10,7 +10,26 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background: #f5f5f5;
+  background: url('images/azure.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed; /* Keeps the background fixed while the content scrolls */
+  background-position: center top;
+}
+
+/* Parallax Background Effect */
+body.parallax {
+  background-attachment: scroll;
+  background-position: 0px 0px;
+  animation: pan-background 20s linear infinite;
+}
+
+@keyframes pan-background {
+  0% {
+    background-position: 20px 70%;
+  }
+  100% {
+    background-position: center bottom;
+  }
 }
 
 /* Header Styling */
@@ -21,156 +40,4 @@ header {
   padding: 20px 0;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #f39c12;
-}
-
-/* About Section */
-#about {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.about-container img.headshot {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.about-container .about-text {
-  flex: 1;
-}
-
-/* Experience Section */
-#experience {
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.experience-item h3 {
-  color: #990000; /* USC Cardinal */
-}
-
-/* Projects Section */
-#projects {
-  display: flex;
-  justify-content: center; /* Center the projects horizontally */
-  align-items: center; /* Center the projects vertically */
-  flex-direction: column;
-}
-
-.projects-container {
-  display: flex;
-  flex-wrap: wrap; /* Allows wrapping for responsiveness */
-  justify-content: center; /* Horizontally align the project containers */
-  align-items: center; /* Vertically center within the parent */
-  gap: 20px; /* Spacing between containers */
-  width: 780px; /* Ensures the entire container has a fixed width */
-  margin: 0 auto; /* Centers the container horizontally */
-}
-
-.project-icon {
-  text-align: center;
-  background: #f5f5f5;
-  border: 2px solid #990000;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.project-icon i {
-  font-size: 24px;
-  color: #990000;
-}
-
-.project-icon:hover {
-  transform: scale(1.1);
-}
-
-/* Contact Section */
-#contact {
-  text-align: center;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  text-align: center;
-  color: #990000; /* USC Cardinal color */
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.back-link:hover {
-  color: #f39c12; /* A highlight color */
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background: #990000;
-  color: white;
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  #about {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-container img.headshot {
-    margin: 0 auto 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-}
+nav
