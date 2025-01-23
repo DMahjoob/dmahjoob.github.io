@@ -27,10 +27,14 @@ body.parallax {
   0% {
     background-position: 20px 70%;
   }
+  50% {
+    background-position: 80% 30%;
+  }
   100% {
-    background-position: center bottom;
+    background-position: 20px 70%;
   }
 }
+
 
 /* Header Styling */
 header {
