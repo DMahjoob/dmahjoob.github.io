@@ -81,6 +81,25 @@
     .project-link {
       text-decoration: none;
     }
+    /* Parallax Background Effect */
+    body {
+      background: url('images/azure.jpg') no-repeat center center fixed;
+      background-size: cover; /* Ensure the image covers the entire viewport */
+      background-attachment: fixed; /* Keeps the background fixed while the content scrolls */
+      background-position: center top; /* Starts the background at the top */
+    }
+    
+    body.parallax {
+      background-attachment: scroll; /* Use this for smoother scrolling with modern browsers */
+      background-position: 0px 0px; /* Ensure alignment */
+      animation: pan-background 20s linear infinite; /* Pan background */
+    }
+    
+    /* Parallax Animation */
+    @keyframes pan-background {
+      0% {
+        background-position: 20px 70%;
+        color viewable color!
   </style>
 </head>
 <!-- Google tag (gtag.js) -->
