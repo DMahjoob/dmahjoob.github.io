@@ -244,15 +244,6 @@ body {
   justify-content: center;
 }
 
-.avatar::before {
-  content: '';
-  width: calc(100% - 8px);
-  height: calc(100% - 8px);
-  border-radius: 50%;
-  background: #1e293b;
-  position: absolute;
-}
-
 .about-text {
   font-size: 1.125rem;
   line-height: 1.6;
