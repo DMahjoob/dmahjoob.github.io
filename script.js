@@ -110,11 +110,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if (i < originalText.length) {
         heroTitle.textContent += originalText.charAt(i);
         i++;
-        setTimeout(typeWriter, 100);
+        setTimeout(typeWriter, 500);
       }
     }
     
-    setTimeout(typeWriter, 1000);
+    setTimeout(typeWriter, 2000);
   }
 });
 
