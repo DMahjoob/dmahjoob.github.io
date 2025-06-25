@@ -13,41 +13,44 @@ function scrollToSection(sectionId) {
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded'); // Debug log
   
-  // SIMPLIFIED: Just make hero content visible immediately, no complex animations
+  // SMOOTH: Add fade-up animation WITHOUT race condition
   const heroContent = document.querySelector('.hero-content');
-  if (heroContent) {
-    console.log('Hero content found'); // Debug log
-    heroContent.style.opacity = '1';
-    heroContent.style.transform = 'translateY(0)';
-  }
-
-  // SIMPLIFIED: Start typewriter effect immediately, no delay
   const heroTitle = document.querySelector('.hero-title');
-  if (heroTitle) {
-    console.log('Hero title found:', heroTitle.textContent); // Debug log
+  
+  if (heroContent && heroTitle) {
+    console.log('Hero elements found'); // Debug log
+    
+    // Store the original text before any animations
     const originalText = heroTitle.textContent;
     
-    if (originalText && originalText.length > 0) {
-      console.log('Starting typewriter effect'); // Debug log
-      heroTitle.textContent = ''; // Clear text
-      let i = 0;
+    // Step 1: Start the fade-up animation
+    heroContent.classList.add('fade-in');
+    
+    // Step 2: Wait for fade-up to complete, THEN start typewriter
+    setTimeout(() => {
+      console.log('Starting typewriter effect after fade-up'); // Debug log
       
-      function typeWriter() {
-        if (i < originalText.length) {
-          heroTitle.textContent += originalText.charAt(i);
-          console.log('Typing:', heroTitle.textContent); // Debug log
-          i++;
-          setTimeout(typeWriter, 150); // Slightly slower for debugging
-        } else {
-          console.log('Typewriter effect completed'); // Debug log
+      if (originalText && originalText.length > 0) {
+        heroTitle.textContent = ''; // Clear text AFTER fade-up is done
+        let i = 0;
+        
+        function typeWriter() {
+          if (i < originalText.length) {
+            heroTitle.textContent += originalText.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100); // Nice typing speed
+          } else {
+            console.log('Typewriter effect completed'); // Debug log
+          }
         }
+        
+        // Start typing
+        typeWriter();
       }
-      
-      // Start typing immediately
-      setTimeout(typeWriter, 500); // Just a small delay to see what happens
-    }
+    }, 1000); // Wait for CSS animation to complete (1s)
+    
   } else {
-    console.log('Hero title NOT found'); // Debug log
+    console.log('Hero elements NOT found'); // Debug log
   }
 
   // Add scroll-based animations for project cards
