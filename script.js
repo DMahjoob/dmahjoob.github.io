@@ -103,18 +103,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const heroTitle = document.querySelector('.hero-title');
   if (heroTitle) {
     const originalText = heroTitle.textContent;
-    heroTitle.textContent = '';
-    let i = 0;
-    
-    function typeWriter() {
-      if (i < originalText.length) {
-        heroTitle.textContent += originalText.charAt(i);
-        i++;
-        setTimeout(typeWriter, 100); // Loops the typewriter effect
+  
+    // Only run typing effect if originalText exists
+    if (originalText && originalText.length > 0) {
+      heroTitle.textContent = ''; // clear before typing
+      let i = 0;
+  
+      function typeWriter() {
+        if (i < originalText.length) {
+          heroTitle.textContent += originalText.charAt(i);
+          i++;
+          setTimeout(typeWriter, 100);
+        }
       }
+  
+      // Start typing after short delay
+      setTimeout(typeWriter, 100); // 0.1s delay is enough
     }
   }
-  setTimeout(typeWriter, 100); 
 });
 
 // Add active state styles
