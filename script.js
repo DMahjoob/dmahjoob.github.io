@@ -11,12 +11,43 @@ function scrollToSection(sectionId) {
 
 // Initialize page animations
 document.addEventListener('DOMContentLoaded', function() {
-  // Add fade-in animation to hero content
+  console.log('DOM loaded'); // Debug log
+  
+  // SIMPLIFIED: Just make hero content visible immediately, no complex animations
   const heroContent = document.querySelector('.hero-content');
   if (heroContent) {
-    setTimeout(() => {
-      heroContent.classList.add('fade-in');
-    }, 100);
+    console.log('Hero content found'); // Debug log
+    heroContent.style.opacity = '1';
+    heroContent.style.transform = 'translateY(0)';
+  }
+
+  // SIMPLIFIED: Start typewriter effect immediately, no delay
+  const heroTitle = document.querySelector('.hero-title');
+  if (heroTitle) {
+    console.log('Hero title found:', heroTitle.textContent); // Debug log
+    const originalText = heroTitle.textContent;
+    
+    if (originalText && originalText.length > 0) {
+      console.log('Starting typewriter effect'); // Debug log
+      heroTitle.textContent = ''; // Clear text
+      let i = 0;
+      
+      function typeWriter() {
+        if (i < originalText.length) {
+          heroTitle.textContent += originalText.charAt(i);
+          console.log('Typing:', heroTitle.textContent); // Debug log
+          i++;
+          setTimeout(typeWriter, 150); // Slightly slower for debugging
+        } else {
+          console.log('Typewriter effect completed'); // Debug log
+        }
+      }
+      
+      // Start typing immediately
+      setTimeout(typeWriter, 500); // Just a small delay to see what happens
+    }
+  } else {
+    console.log('Hero title NOT found'); // Debug log
   }
 
   // Add scroll-based animations for project cards
@@ -97,32 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.transform = 'scale(1) translateY(0)';
     });
   });
-
-  // FIXED: Add typing effect to hero title with proper timing
-  const heroTitle = document.querySelector('.hero-title');
-  if (heroTitle) {
-    const originalText = heroTitle.textContent;
-    
-    // Only run typing effect if originalText exists
-    if (originalText && originalText.length > 0) {
-      // Wait for the fade-in animation to complete first
-      setTimeout(() => {
-        heroTitle.textContent = ''; // Clear after fade-in is done
-        let i = 0;
-        
-        function typeWriter() {
-          if (i < originalText.length) {
-            heroTitle.textContent += originalText.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-          }
-        }
-        
-        // Start typing
-        typeWriter();
-      }, 1200); // Wait for fade-in animation (1s) + buffer (0.2s)
-    }
-  }
 });
 
 // Add active state styles
@@ -138,13 +143,3 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
-
-// Handle window resize for responsive navigation
-window.addEventListener('resize', function() {
-  // Add any responsive behavior here if needed
-});
-
-// Preload images and optimize performance
-document.addEventListener('DOMContentLoaded', function() {
-  // Add any image preloading logic here if you add images later
-});
