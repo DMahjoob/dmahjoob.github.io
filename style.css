@@ -87,8 +87,9 @@ body {
 .hero-content {
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 1s ease-out 0.5s forwards; /* Add 0.5s delay */
 }
+
 
 @keyframes fadeInUp {
   to {
