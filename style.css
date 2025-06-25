@@ -1,189 +1,536 @@
-/* General Reset */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* General Body Styling */
 body {
-	font-family: Arial, sans-serif;
-	line-height: 1.6;
-	color: #333;
-	background: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
 }
 
-/* Header Styling */
-header {
-	background: #990000;
-	/* USC Cardinal */
-	color: white;
-	text-align: center;
-	padding: 20px 0;
+.min-h-screen {
+  min-height: 100vh;
 }
 
-nav ul {
-	list-style: none;
-	display: flex;
-	justify-content: center;
+.bg-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
 }
 
-nav ul li {
-	margin: 0 15px;
+/* Navigation */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-nav ul li a {
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	transition: color 0.3s ease;
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-nav ul li a:hover {
-	color: #f39c12;
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-menu {
+  display: none;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex;
+  }
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 6rem 1.5rem 4rem;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #60a5fa, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 3rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-button {
+  background: linear-gradient(to right, #8b5cf6, #ec4899);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-button:hover {
+  background: linear-gradient(to right, #7c3aed, #db2777);
+  transform: scale(1.05);
+}
+
+.arrow-down {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 43% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  90% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Sections */
+.section {
+  padding: 5rem 1.5rem;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.contact-container {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Cards */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+}
+
+.card-header {
+  padding: 1.5rem 1.5rem 0;
+  text-align: center;
+}
+
+.card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card-content > *:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
 /* About Section */
-#about {
-	display: flex;
-	align-items: center;
-	padding: 20px;
-	margin: 20px auto;
-	max-width: 800px;
-	background: white;
-	border-radius: 10px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, #a78bfa, #f472b6);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-container img.headshot {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	margin-right: 20px;
+.avatar::before {
+  content: '';
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  border-radius: 50%;
+  background: #1e293b;
+  position: absolute;
 }
 
-.about-container .about-text {
-	flex: 1;
+.about-text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Experience Section */
-#experience {
-	padding: 20px;
-	margin: 20px auto;
-	max-width: 800px;
-	background: white;
-	border-radius: 10px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.experience-item h3 {
-	color: #990000;
-	/* USC Cardinal */
+.job-title {
+  font-size: 1.5rem;
+  color: #c084fc;
+  margin-bottom: 0.5rem;
+}
+
+.job-company {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.job-description {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+.job-description:last-child {
+  margin-bottom: 0;
 }
 
 /* Projects Section */
-#projects {
-	display: flex;
-	justify-content: center;
-	/* Center the projects horizontally */
-	align-items: center;
-	/* Center the projects vertically */
-	flex-direction: column;
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
-.projects-container {
-	display: flex;
-	flex-wrap: wrap;
-	/* Allows wrapping for responsiveness */
-	justify-content: center;
-	/* Horizontally align the project containers */
-	align-items: center;
-	/* Vertically center within the parent */
-	gap: 20px;
-	/* Spacing between containers */
-	width: 780px;
-	/* Ensures the entire container has a fixed width */
-	margin: 0 auto;
-	/* Centers the container horizontally */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
 }
 
 .project-icon {
-	text-align: center;
-	background: #f5f5f5;
-	border: 2px solid #990000;
-	border-radius: 50%;
-	width: 120px;
-	height: 120px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
-.project-icon i {
-	font-size: 24px;
-	color: #990000;
+.project-card:hover .project-icon {
+  transform: scale(1.1);
 }
 
-.project-icon:hover {
-	transform: scale(1.1);
+.project-icon.red-pink {
+  background: linear-gradient(to right, #ef4444, #ec4899);
+}
+
+.project-icon.blue-purple {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+}
+
+.project-icon.green-teal {
+  background: linear-gradient(to right, #10b981, #14b8a6);
+}
+
+.project-icon.purple-indigo {
+  background: linear-gradient(to right, #8b5cf6, #6366f1);
+}
+
+.project-icon.yellow-orange {
+  background: linear-gradient(to right, #eab308, #f97316);
+}
+
+.project-icon.cyan-blue {
+  background: linear-gradient(to right, #06b6d4, #3b82f6);
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.project-button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.project-button:hover {
+  opacity: 0.9;
+}
+
+.project-button.red-pink {
+  background: linear-gradient(to right, #ef4444, #ec4899);
+}
+
+.project-button.blue-purple {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+}
+
+.project-button.green-teal {
+  background: linear-gradient(to right, #10b981, #14b8a6);
+}
+
+.project-button.purple-indigo {
+  background: linear-gradient(to right, #8b5cf6, #6366f1);
+}
+
+.project-button.yellow-orange {
+  background: linear-gradient(to right, #eab308, #f97316);
+}
+
+.project-button.cyan-blue {
+  background: linear-gradient(to right, #06b6d4, #3b82f6);
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.button-primary {
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button-primary:hover {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+}
+
+.button-outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Contact Section */
-#contact {
-	text-align: center;
-	padding: 20px;
-	margin: 20px auto;
-	max-width: 800px;
-	background: white;
-	border-radius: 10px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.back-link {
-	display: inline-block;
-	margin-top: 20px;
-	text-decoration: none;
-	text-align: center;
-	color: #990000;
-	/* USC Cardinal color */
-	font-weight: bold;
-	transition: color 0.3s ease;
-}
-
-.back-link:hover {
-	color: #f39c12;
-	/* A highlight color */
+.contact-text {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
 }
 
 /* Footer */
-footer {
-	text-align: center;
-	padding: 10px;
-	background: #990000;
-	color: white;
-	font-size: 14px;
-	margin-top: 20px;
+.footer {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-subtext {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease-out;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-	#about {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.about-container img.headshot {
-		margin: 0 auto 20px;
-	}
-
-	nav ul {
-		flex-direction: column;
-	}
-
-	nav ul li {
-		margin: 10px 0;
-	}
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button-primary,
+  .button-outline {
+    width: 100%;
+    max-width: 200px;
+  }
 }
