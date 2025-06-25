@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
-  setTimeout(typeWriter, 200); // Loops the typewriter effect
+  setTimeout(typeWriter, 100); 
 });
 
 // Add active state styles
