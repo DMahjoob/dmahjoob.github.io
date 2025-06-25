@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    setTimeout(typeWriter, 500);
+    setTimeout(typeWriter, 1000);
   }
 });
 
