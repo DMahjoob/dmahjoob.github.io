@@ -1,4 +1,3 @@
-
 // Smooth scrolling function
 function scrollToSection(sectionId) {
   const element = document.getElementById(sectionId);
@@ -99,26 +98,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Add typing effect to hero title (optional enhancement)
+  // FIXED: Add typing effect to hero title with proper timing
   const heroTitle = document.querySelector('.hero-title');
   if (heroTitle) {
     const originalText = heroTitle.textContent;
-  
+    
     // Only run typing effect if originalText exists
     if (originalText && originalText.length > 0) {
-      heroTitle.textContent = ''; // clear before typing
-      let i = 0;
-  
-      function typeWriter() {
-        if (i < originalText.length) {
-          heroTitle.textContent += originalText.charAt(i);
-          i++;
-          setTimeout(typeWriter, 100);
+      // Wait for the fade-in animation to complete first
+      setTimeout(() => {
+        heroTitle.textContent = ''; // Clear after fade-in is done
+        let i = 0;
+        
+        function typeWriter() {
+          if (i < originalText.length) {
+            heroTitle.textContent += originalText.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+          }
         }
-      }
-  
-      // Start typing after short delay
-      setTimeout(typeWriter, 100); // 0.1s delay is enough
+        
+        // Start typing
+        typeWriter();
+      }, 1200); // Wait for fade-in animation (1s) + buffer (0.2s)
     }
   }
 });
