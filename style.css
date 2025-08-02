@@ -266,37 +266,44 @@ body {
   gap: 1.5rem;
 }
 
+/* Experience Row Layout */
+.experience-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.experience-content {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.card-header {
+  margin-bottom: 0.5rem;
+}
+
 .job-title {
   font-size: 1.5rem;
-  color: #c084fc;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #d8b4fe;
+  margin-bottom: 0.25rem;
 }
 
 .job-company {
   font-size: 1.125rem;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .job-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1rem;
 }
 
 .job-description:last-child {
   margin-bottom: 0;
-}
-/* Experience Section Styles with Circular Icons */Add commentMore actions
-
-/* Experience Header Layout */
-.experience-header {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem 1.5rem 0;
-}
-
-.experience-details {
-  flex: 1;
 }
 
 /* Experience Icon Styles */
@@ -319,6 +326,7 @@ body {
   object-fit: cover;
   border-radius: 50%;
   background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover effect for experience cards */
@@ -326,36 +334,20 @@ body {
   transform: scale(1.1);
 }
 
-.experience-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-}
-
-.experience-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 0.5rem;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-
 /* Responsive adjustments for mobile */
 @media (max-width: 640px) {
-  .experience-header {
+  .experience-row {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 1rem;
   }
-  
+
   .experience-icon {
     width: 3.5rem;
     height: 3.5rem;
   }
-  
-  .experience-details {
+
+  .experience-content {
     text-align: center;
   }
 }
