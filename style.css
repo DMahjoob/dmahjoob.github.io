@@ -10,6 +10,20 @@ body {
   color: #ffffff;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url("/images/background.jpg") no-repeat center center / cover;
+  z-index: -1;
+  opacity: 1;
+  pointer-events: none;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
