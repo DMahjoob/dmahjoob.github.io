@@ -1,286 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Darius Mahjoob - Portfolio</title>
-    <meta name="description" content="Computer Science & Business Administration Major at USC" />
-    <meta name="author" content="Darius Mahjoob" />
-
-    <meta property="og:title" content="Darius Mahjoob - Portfolio" />
-    <meta property="og:description" content="Computer Science & Business Administration Major at USC" />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  </head>
-
-  <body>
-    <div class="min-h-screen bg-gradient">
-      <!-- Navigation -->
-      <nav class="fixed-nav">
-        <div class="nav-container">
-          <div class="nav-content">
-            <h1 class="nav-title">Darius Mahjoob</h1>
-            <div class="nav-menu">
-              <button class="nav-link" onclick="scrollToSection('about')">About</button>
-              <button class="nav-link" onclick="scrollToSection('experience')">Experience</button>
-              <button class="nav-link" onclick="scrollToSection('projects')">Projects</button>
-              <button class="nav-link" onclick="scrollToSection('contact')">Contact</button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="hero-container">
-          <div class="hero-content fade-in">
-            <h1 class="hero-title">Darius Mahjoob</h1>
-            <p class="hero-subtitle">Computer Science & Business Administration Major at USC</p>
-            <p class="hero-description">Passionate about AI, Data Analytics, Cryptography, and Cybersecurity</p>
-            <button class="hero-button" onclick="scrollToSection('about')">
-              Explore My Work
-              <span class="arrow-down">↓</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="section">
-        <div class="container">
-          <div class="card">
-            <div class="card-header">
-              <h2 class="section-title">About Me</h2>
-            </div>
-            <div class="card-content">
-              <div class="avatar"><img src="images/headshot.jpg" alt="Darius Mahjoob Headshot" class="avatar-img" /></div>
-              <p class="about-text">
-                Hello! Welcome to my personal website, built in HTML, CSS, and JS. Thank you so much for visiting!
-                I'm Darius Mahjoob, a USC student majoring in Computer Science & Business Administration. I'm also enrolled in
-                the Progressive Degree Program (PDP) to receive my graduate degree in Electrical Engineering with
-                an emphasis in Machine Learning. My interests lie in the intersection of Artificial Intelligence & Security,
-                specifically with regards to intelligent digital forensics and autonomous defense systems. 
-              </p>
-              <p class="about-text">
-                Here, you'll find some of my experience and personal projects that I have developed over the past few years.
-              </p>
-              <div class="button-group">
-                <a href="mailto:dmahjoob@usc.edu" class="button-outline">Email Me</a>
-                <a href="https://linkedin.com/in/darius-mahjoob" target="_blank" class="button-outline">LinkedIn</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience" class="section">
-        <div class="container">
-          <h2 class="section-title">Experience</h2>
-          <div class="experience-list">
-      
-            <!-- Teaching Assistant -->
-            <div class="card hover-card">
-              <div class="experience-row">
-                <div class="experience-content">
-                  <div class="card-header">
-                    <h3 class="job-title">Teaching Assistant</h3>
-                    <p class="job-company">University of Southern California • November 2024 – Present</p>
-                  </div>
-                  <div class="card-content">
-                    <p class="job-description">
-                      <strong>Courses:</strong> TAC 365, TAC 359, TAC 352, TAC 259 – Managing Data in C++, Applied Neural Networks, Applied ML & Data Mining, Basics of AI.
-                    </p>
-                    <p class="job-description">
-                      Designed a comprehensive course syllabus and grading framework, culminating in a final project where students built an ETL pipeline using AWS S3, Lambda, and QuickSight. 
-                      Ported all course materials and grading infrastructure into a custom GitHub Classroom setup, streamlining assignment workflows, automating tests & feedback, and enabling version-controlled student submissions.
-                      Administered labs, graded assignments/exams, and mentored students on AI model development, neural network optimization, abstract data types, and graph traversal algorithms.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- DrFirst -->
-            <div class="card hover-card">
-              <div class="experience-row">
-                <div class="experience-content">
-                  <div class="card-header">
-                    <h3 class="job-title">Data & ML Engineering Intern</h3>
-                    <p class="job-company">DrFirst • June 2025 – August 2025</p>
-                  </div>
-                  <div class="card-content">
-                    <p class="job-description">
-                      Automated an ETL pipeline for 53 pharmaceutical brands, integrating AWS S3 and QuickSight to visualize prescription analysis data and reduce manual processing time by over 90%.
-                      Developed AWS Lambda scripts for scheduled updates and integrated Microsoft Azure Bot Service for chatbot-driven analytics.
-                      Implemented an LSTM neural network to model and forecast brand-level data growth based on historical trends.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Captis -->
-            <div class="card hover-card">
-              <div class="experience-row">
-                <div class="experience-content">
-                  <div class="card-header">
-                    <h3 class="job-title">Prompt Engineering Intern</h3>
-                    <p class="job-company">Captis Intelligence • May 2024 – August 2024</p>
-                  </div>
-                  <div class="card-content">
-                    <p class="job-description">
-                      Developed a chatbot to enhance query efficiency and accuracy by 25% within the Captis Intelligence database.
-                      Adapted a pre-trained LLM to generate optimized SQL queries across a dataset of over 5 million prompts, improving search relevance and backend performance.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Resume Button -->
-            <div class="card text-center">
-              <div class="card-content">
-                <a href="resume.pdf" target="_blank" class="button-outline">View Full Resume</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="section">
-        <div class="container">
-          <h2 class="section-title">Projects</h2>
-          <div class="projects-grid">
-            <div class="project-card" data-gradient="red-pink">
-              <div class="project-icon red-pink">💻</div>
-              <h3 class="project-title">Discord Meeting Transcript Bot</h3>
-              <p class="project-description">
-                Developed using Pycord, Groq, and Google Cloud Speech-to-Text, this project transcribes and summarizes audio recordings in real-time, leveraging AI to extract key insights and action items effortlessly to increase productivity and keep tasks on track.
-              </p>
-              <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pycord</span>
-                <span class="tech-tag">Groq</span>
-                <span class="tech-tag">Google Cloud</span>
-              </div>
-              <a href="https://github.com/DMahjoob/DiscordTranscriber/tree/main" target="_blank" class="project-button red-pink">View Project</a>
-            </div>
-
-            <div class="project-card" data-gradient="blue-purple">
-              <div class="project-icon blue-purple">📈</div>
-              <h3 class="project-title">ML Stock Predictor</h3>
-              <p class="project-description">
-                Developed using Python and TensorFlow, this project predicts stock market trends using a deep learning model trained on historical data. The application integrates Flask for its web interface, providing real-time prediction visualization and analysis tools.
-              </p>
-              <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">TensorFlow</span>
-                <span class="tech-tag">Flask</span>
-                <span class="tech-tag">ML</span>
-              </div>
-              <a href="https://dmahjoob.pythonanywhere.com/" target="_blank" class="project-button blue-purple">View Project</a>
-            </div>
-
-            <div class="project-card" data-gradient="green-teal">
-              <div class="project-icon green-teal">💻</div>
-              <h3 class="project-title">Lunch Buddies!</h3>
-              <p class="project-description">
-                Leveraged a BERT Transformer model to calculate similarity scores and pair users based on their preferences submitted via Google Forms. It automates matchmaking to connect responders with their best potential lunch partners.
-              </p>
-              <div class="tech-tags">
-                <span class="tech-tag">BERT</span>
-                <span class="tech-tag">Transformers</span>
-                <span class="tech-tag">Google Forms</span>
-                <span class="tech-tag">AI</span>
-              </div>
-              <a href="https://github.com/DMahjoob/AvenuesConsultingProjects/tree/main/Lunch%20Buddies" target="_blank" class="project-button green-teal">View Project</a>
-            </div>
-
-            <div class="project-card" data-gradient="purple-indigo">
-              <div class="project-icon purple-indigo">🎮</div>
-              <h3 class="project-title">Pokemon Desolation</h3>
-              <p class="project-description">
-                Actively contributed as a quality assurance tester and lead composer, writing a full custom soundtrack and improving player experience through detailed testing. The game was developed with scripting enhancements in Ruby for optimized gameplay mechanics.
-              </p>
-              <div class="tech-tags">
-                <span class="tech-tag">Ruby</span>
-                <span class="tech-tag">Game Dev</span>
-                <span class="tech-tag">QA</span>
-                <span class="tech-tag">Music</span>
-              </div>
-              <a href="https://www.rebornevo.com/deso/index.php/" target="_blank" class="project-button purple-indigo">View Project</a>
-            </div>
-
-            <div class="project-card" data-gradient="yellow-orange">
-              <div class="project-icon yellow-orange">⚡</div>
-              <h3 class="project-title">Pokemon Azure</h3>
-              <p class="project-description">
-                Designed an intelligent CPU AI system in C++ to dynamically respond to player inputs and strategies. Also composed the majority of the game's immersive soundtrack to elevate the gaming experience.
-              </p>
-              <div class="tech-tags">
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">AI</span>
-                <span class="tech-tag">Game Dev</span>
-                <span class="tech-tag">Music</span>
-              </div>
-              <a href="https://www.rebornevo.com/forums/topic/58037-pokemon-azure-act-2-is-out/" target="_blank" class="project-button yellow-orange">View Project</a>
-            </div>
-
-            <div class="project-card" data-gradient="cyan-blue">
-              <div class="project-icon cyan-blue">💻</div>
-              <h3 class="project-title">AI Security Risk Detector</h3>
-              <p class="project-description">
-                Implemented a Linear Regression Model to predict the likelihood of future security risks based on prior breaches. This tool helps evaluate server safety using historical data and advanced statistical techniques.
-              </p>
-              <div class="tech-tags">
-                <span class="tech-tag">AI</span>
-                <span class="tech-tag">Linear Regression</span>
-                <span class="tech-tag">Security</span>
-                <span class="tech-tag">Statistics</span>
-              </div>
-              <a href="https://github.com/DMahjoob/SecurityRiskDetector" target="_blank" class="project-button cyan-blue">View Project</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="section">
-        <div class="contact-container">
-          <div class="card text-center">
-            <div class="card-header">
-              <h2 class="section-title">Let's Connect</h2>
-            </div>
-            <div class="card-content">
-              <p class="contact-text">
-                Feel free to reach out for collaborations, opportunities, or just to say hello!
-              </p>
-              <div class="button-group">
-                <a href="mailto:dmahjoob@usc.edu" class="button-primary">Email Me</a>
-                <a href="https://linkedin.com/in/darius-mahjoob" target="_blank" class="button-outline">LinkedIn</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-container">
-          <p class="footer-text">© 2025 | Website designed and developed by Darius Mahjoob</p>
-          <p class="footer-subtext">Built with React, TypeScript, and Tailwind CSS</p>
-        </div>
-      </footer>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Darius Mahjoob</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
+    <div class="container">
+        <!-- Left Column - Content -->
+        <div class="content">
+            <h1 class="code-header">
+                <span class="def">def</span> <span class="function-name">about()</span>:
+            </h1>
+
+            <div class="intro">
+                <p>I am a Computer Science & Business Administration major at <a href="https://www.usc.edu/" target="_blank">USC 🎓</a>, where I have the privilege to pursue my passion for AI, data analytics, and cryptography. My work has included projects on <strong>machine learning</strong>, <strong>natural language processing</strong>, and <strong>intelligent systems</strong>.</p>
+            </div>
+
+            <div class="separator">>>></div>
+
+            <div class="intro">
+                <p>Previously, I worked as a Prompt Engineering Intern at <strong>Captis Intelligence</strong>, where I developed AI-powered chatbots to enhance database query efficiency by 25%. I am very fortunate to have worked with cutting-edge LLM technology and gained experience in <strong>SQL optimization</strong> and <strong>data processing</strong>.</p>
+                
+                <p style="margin-top: 20px;">I have had the pleasure to serve as a Teaching Assistant at USC for courses including <strong>ITP 365</strong> (Managing Data in C++), <strong>ITP 259</strong> (Basics of AI), and <strong>ENGR102</strong> (Freshman Academy), where I mentor students on AI model development, data structures, and algorithms.</p>
+            </div>
+
+            <div class="separator">>>></div>
+
+            <section class="section-title">
+                <strong>Featured Projects</strong>
+            </section>
+
+            <div class="projects-grid">
+                <div class="project-card project-1">
+                    <h3><i class="fas fa-file-audio"></i> Discord Meeting Transcript Bot</h3>
+                    <p>Developed using Pycord, Groq, and Google Cloud Speech-to-Text to transcribe and summarize audio recordings in real-time, leveraging AI to extract key insights and action items.</p>
+                </div>
+
+                <div class="project-card project-2">
+                    <h3><i class="fas fa-chart-line"></i> ML Stock Predictor</h3>
+                    <p>Built with Python and TensorFlow to predict stock market trends using deep learning trained on historical data, with Flask web interface for real-time visualization.</p>
+                </div>
+
+                <div class="project-card project-3">
+                    <h3><i class="fas fa-hamburger"></i> Lunch Buddies!</h3>
+                    <p>Leveraged a BERT Transformer model to calculate similarity scores and pair users based on preferences, automating matchmaking for lunch partners.</p>
+                </div>
+
+                <div class="project-card project-4">
+                    <h3><i class="fas fa-dragon"></i> Pokemon Desolation</h3>
+                    <p>Contributed as QA tester and lead composer, writing a full custom soundtrack and improving player experience through detailed testing and Ruby scripting.</p>
+                </div>
+
+                <div class="project-card project-5">
+                    <h3><i class="fas fa-bolt"></i> Pokemon Azure</h3>
+                    <p>Designed an intelligent CPU AI system in C++ to dynamically respond to player strategies, and composed the majority of the game's immersive soundtrack.</p>
+                </div>
+
+                <div class="project-card project-6">
+                    <h3><i class="fas fa-code"></i> AI Security Risk Detector</h3>
+                    <p>Implemented a Linear Regression Model to predict likelihood of future security risks based on prior breaches using historical data.</p>
+                </div>
+            </div>
+
+            <div class="separator" style="margin-top: 40px;">>>></div>
+
+            <div class="intro">
+                <p>I am extremely grateful for everyone who has supported my journey, including my peers, mentors, and the broader tech community. Special thanks to all my professors at USC and colleagues at Captis Intelligence.</p>
+            </div>
+        </div>
+
+        <!-- Right Column - Profile -->
+        <div class="profile">
+            <img src="images/headshot.jpg" alt="Darius Mahjoob" class="profile-image" />
+            <h2 class="profile-name">darius mahjoob</h2>
+            <p class="profile-pronouns">(he/him)</p>
+            
+            <div class="social-links">
+                <a href="resume.pdf" target="_blank" title="Resume"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/DMahjoob" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/darius-mahjoob" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/dariusmahjoob" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <div class="email-box">
+                dmahjoob@usc.edu
+            </div>
+            
+            <a href="resume.pdf" target="_blank" class="cv-link">resume</a>
+        </div>
+    </div>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKR76WWL4H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LKR76WWL4H');
+    </script>
+    
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
