@@ -208,10 +208,6 @@ body {
     color: white;
 }
 
-.project-card:hover {
-    transform: translateX(10px);
-}
-
 .project-card h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
