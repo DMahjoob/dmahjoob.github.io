@@ -1,221 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Darius Mahjoob - Experience</title>
-      <link rel="stylesheet" href="style.css" />
-      <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-         />
-      <style>
-         /* General Styling for Consistency */
-         body {
-         background: url('images/azure.jpg') no-repeat center center fixed;
-         background-size: cover; /* Ensure the image covers the entire viewport */
-         }
-         section {
-         margin: 20px auto;
-         padding: 20px;
-         max-width: 800px;
-         background: rgba(255, 255, 255, 0.9); /* Slight transparency for readability */
-         border-radius: 10px;
-         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-         }
-         /* Projects Section Styling */
-         .projects-container {
-         display: flex;
-         flex-wrap: wrap;
-         gap: 20px;
-         justify-content: center;
-         }
-         .project-box {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         width: 97%; 
-         padding: 20px;
-         background: rgba(245, 245, 245, 0.9); /* Slight transparency for readability */
-         border: 1px solid #ddd;
-         border-radius: 10px;
-         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-         color: #333;
-         text-align: center;
-         transition: transform 0.3s ease;
-         }
-         /* Hover to Enlarge */
-         .project-box:hover {
-         transform: scale(1.1);
-         }
-         /* Project Icon */
-         .project-box i {
-         font-size: 3rem;
-         margin-bottom: 15px;
-         }
-         /* Project Title */
-         .project-box h3 {
-         margin-bottom: 10px;
-         font-size: 1.5rem;
-         }
-         /* Project Description */
-         .project-box p {
-         font-size: 1rem;
-         }
-         /* Color Classes */
-         .project-1 { background-color: #FF6666; } /* Red */
-         .project-2 { background-color: #FF9999; } /* Ligter Red */
-         .project-3 { background-color: #9c27b0; } /* Purple */
-         .project-4 { background-color: #ff5722; } /* Orange */
-         .project-5 { background-color: #ffc107; } /* Yellow */
-         /* Link Wrapping */
-         .project-link {
-         text-decoration: none;
-         }
-      </style>
-   </head>
-   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKR76WWL4H"></script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-      gtag('config', 'G-LKR76WWL4H');
-   </script>
-   <body>
-      <header>
-         <h1>Darius Mahjoob</h1>
-         <nav>
-            <ul>
-               <li><a href="#about">About</a></li>
-               <li><a href="#experience">Experience</a></li>
-               <li><a href="#projects">Projects</a></li>
-               <li><a href="#contact">Contact</a></li>
-            </ul>
-         </nav>
-      </header>
-      <main>
-         <!-- About Section -->
-         <section id="about">
-            <div class="about-container">
-               <img
-                  src="images/headshot.jpg"
-                  alt="Darius Mahjoob"
-                  class="headshot"
-                  />
-               <div class="about-text">
-                  <h2>About Me</h2>
-                  <p>
-                     Hello! Welcome to my personal website, written in HTML, CSS, and JS. Thank you so much for visiting!
-                     I'm Darius Mahjoob, a Computer Science &amp; Business
-                     Administration major at USC. I have a passion for AI, data
-                     analytics, and cryptography, and I love building projects to solve problems. Here, you'll find some of my 
-                     experience and personal projects that I have developed over the past few years.  
-                  </p>
-                  <p>
-                     Please connect with me via <a href="mailto:dmahjoob@usc.edu">email</a> or <a href="https://linkedin.com/in/darius-mahjoob">LinkedIn</a>!.
-                  </p>
-                  <p>
-                     Like the Background Art? It's from my game, <a href="https://www.rebornevo.com/forums/topic/58037-pokemon-azure-act-2-is-out/" target="_blank">Pokemon Azure!</a>
-                  </p>
-               </div>
-            </div>
-         </section>
-         <!-- Experience Section -->
-         <section id="experience">
-            <h2>Experience</h2>
-            <div class="experience-item">
-               <h3>Teaching Assistant</h3>
-               <h4>University of Southern California</h4>
-               <p><em>November 2024 - May 2025</em></p>
-               <p>
-                  <em>Courses:</em> ITP 365, ITP 259, ENGR102 - Managing Data in C++,
-                  Basics of AI, Freshman Academy.<br />
-                  Administrate labs, assist students during office hours, grade
-                  labs/assignments, mentor students on AI Model Development, Data
-                  Structures & Abstract Data Types, and Graph Traversal Algorithms.
-               </p>
-            </div>
-            <div class="experience-item">
-               <h3>Prompt Engineering Intern</h3>
-               <h4>Captis Intelligence</h4>
-               <p><em>May 2024 - August 2024</em></p>
-               <p>
-                  Developed a chatbot to enhance query efficiency and accuracy by 25%
-                  within the Captis database. Adapt a pre-trained LLM to generate
-                  optimized SQL queries from a dataset exceeding 5 million prompts.
-               </p>
-            </div>
-            <div class="experience-item">
-               <h4>
-                  You can view my
-                  <a href="resume.pdf" target="_blank">full resume here</a> for more
-                  details about my professional and leadership experience.
-               </h4>
-            </div>
-         </section>
-         <!-- Projects Section -->
-         <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects-container">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Darius Mahjoob</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-               <a href="https://github.com/DMahjoob/DiscordTranscriber/tree/main" target="_blank" class="project-link">
-                  <div class="project-box project-1">
-                     <i class="fas fa-file-audio"></i>
-                     <h3>Discord Meeting Transcript Bot</h3>
-                     <p>Developed using Pycord, Groq, and Google Cloud Speech-to-Text, this project transcribes and summarizes audio recordings in real-time, leveraging AI to extract key insights and action items effortlessly to increase productivity and keep tasks on track.</p>
-                  </div>
-               </a>
-               <a href="https://dmahjoob.pythonanywhere.com/" target="_blank" class="project-link">
-                  <div class="project-box project-2">
-                     <i class="fas fa-chart-line"></i>
-                     <h3>ML Stock Predictor</h3>
-                     <p>Developed using Python and TensorFlow, this project predicts stock market trends using a deep learning model trained on historical data. The application integrates Flask for its web interface, providing real-time prediction visualization and analysis tools.</p>
-                  </div>
-               </a>
-               <a href="https://github.com/DMahjoob/AvenuesConsultingProjects/tree/main/Lunch%20Buddies" target="_blank" class="project-link">
-                  <div class="project-box project-1">
-                     <i class="fas fa-hamburger"></i>
-                     <h3>Lunch Buddies!</h3>
-                     <p>Leveraged a BERT Transformer model to calculate similarity scores and pair users based on their preferences submitted via Google Forms. It automates matchmaking to connect responders with their best potential lunch partners.</p>
-                  </div>
-               </a>
-               <a href="https://www.rebornevo.com/deso/index.php/" target="_blank" class="project-link">
-                  <div class="project-box project-2">
-                     <i class="fas fa-dragon"></i>
-                     <h3>Pokemon Desolation</h3>
-                     <p>Actively contributed as a quality assurance tester and lead composer, writing a full custom soundtrack and improving player experience through detailed testing. The game was developed with scripting enhancements in Ruby for optimized gameplay mechanics.</p>
-                  </div>
-               </a>
-               <a href="https://www.rebornevo.com/forums/topic/58037-pokemon-azure-act-2-is-out/" target="_blank" class="project-link">
-                  <div class="project-box project-1">
-                     <i class="fas fa-bolt"></i>
-                     <h3>Pokemon Azure</h3>
-                     <p>Designed an intelligent CPU AI system in C++ to dynamically respond to player inputs and strategies. Also composed the majority of the game's immersive soundtrack to elevate the gaming experience.</p>
-                  </div>
-               </a>
-               <a href="https://github.com/DMahjoob/SecurityRiskDetector" target="_blank" class="project-link">
-                  <div class="project-box project-2">
-                     <i class="fas fa-code"></i>
-                     <h3>AI Security Risk Detector</h3>
-                     <p>Implemented a Linear Regression Model to predict the likelihood of future security risks based on prior breaches. This tool helps evaluate server safety using historical data and advanced statistical techniques.</p>
-                  </div>
-               </a>
+    <div class="container">
+        <!-- Left Column - Content -->
+        <div class="content">
+            <h1 class="code-header">
+                <span class="def">def</span> <span class="function-name">about()</span>:
+            </h1>
+
+            <div class="intro">
+                <p>I am a Computer Science & Business Administration major at <a href="https://www.usc.edu/" target="_blank">USC 🎓</a>, where I have the privilege to pursue my passion for AI, data analytics, and cryptography. My work has included projects on <strong>machine learning</strong>, <strong>natural language processing</strong>, and <strong>intelligent systems</strong>.</p>
             </div>
-         </section>
-         <!-- Contact Section -->
-         <section id="contact">
-            <h2>Contact</h2>
-            <p>
-               Feel free to reach out via
-               <a href="mailto:dmahjoob@usc.edu">email</a> or connect with me on
-               <a href="https://linkedin.com/in/darius-mahjoob">LinkedIn</a>.
-            </p>
-         </section>
-      </main>
-      <footer>
-         <p>&copy; 2025 | Website designed and developed by Darius Mahjoob</p>
-      </footer>
-   </body>
+
+            <div class="separator">>>></div>
+
+            <div class="intro">
+                <p>Previously, I worked as a Prompt Engineering Intern at <strong>Captis Intelligence</strong>, where I developed AI-powered chatbots to enhance database query efficiency by 25%. I am very fortunate to have worked with cutting-edge LLM technology and gained experience in <strong>SQL optimization</strong> and <strong>data processing</strong>.</p>
+                
+                <p style="margin-top: 20px;">I have had the pleasure to serve as a Teaching Assistant at USC for courses including <strong>ITP 365</strong> (Managing Data in C++), <strong>ITP 259</strong> (Basics of AI), and <strong>ENGR102</strong> (Freshman Academy), where I mentor students on AI model development, data structures, and algorithms.</p>
+            </div>
+
+            <div class="separator">>>></div>
+
+            <section class="section-title">
+                <strong>Featured Projects</strong>
+            </section>
+
+            <div class="projects-grid">
+                <div class="project-card project-1">
+                    <h3><i class="fas fa-file-audio"></i> Discord Meeting Transcript Bot</h3>
+                    <p>Developed using Pycord, Groq, and Google Cloud Speech-to-Text to transcribe and summarize audio recordings in real-time, leveraging AI to extract key insights and action items.</p>
+                </div>
+
+                <div class="project-card project-2">
+                    <h3><i class="fas fa-chart-line"></i> ML Stock Predictor</h3>
+                    <p>Built with Python and TensorFlow to predict stock market trends using deep learning trained on historical data, with Flask web interface for real-time visualization.</p>
+                </div>
+
+                <div class="project-card project-3">
+                    <h3><i class="fas fa-hamburger"></i> Lunch Buddies!</h3>
+                    <p>Leveraged a BERT Transformer model to calculate similarity scores and pair users based on preferences, automating matchmaking for lunch partners.</p>
+                </div>
+
+                <div class="project-card project-4">
+                    <h3><i class="fas fa-dragon"></i> Pokemon Desolation</h3>
+                    <p>Contributed as QA tester and lead composer, writing a full custom soundtrack and improving player experience through detailed testing and Ruby scripting.</p>
+                </div>
+
+                <div class="project-card project-5">
+                    <h3><i class="fas fa-bolt"></i> Pokemon Azure</h3>
+                    <p>Designed an intelligent CPU AI system in C++ to dynamically respond to player strategies, and composed the majority of the game's immersive soundtrack.</p>
+                </div>
+
+                <div class="project-card project-6">
+                    <h3><i class="fas fa-code"></i> AI Security Risk Detector</h3>
+                    <p>Implemented a Linear Regression Model to predict likelihood of future security risks based on prior breaches using historical data.</p>
+                </div>
+            </div>
+
+            <div class="separator" style="margin-top: 40px;">>>></div>
+
+            <div class="intro">
+                <p>I am extremely grateful for everyone who has supported my journey, including my peers, mentors, and the broader tech community. Special thanks to all my professors at USC and colleagues at Captis Intelligence.</p>
+            </div>
+        </div>
+
+        <!-- Right Column - Profile -->
+        <div class="profile">
+            <img src="images/headshot.jpg" alt="Darius Mahjoob" class="profile-image" />
+            <h2 class="profile-name">darius mahjoob</h2>
+            <p class="profile-pronouns">(he/him)</p>
+            
+            <div class="social-links">
+                <a href="resume.pdf" target="_blank" title="Resume"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/DMahjoob" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/darius-mahjoob" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/dariusmahjoob" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <div class="email-box">
+                dmahjoob@usc.edu
+            </div>
+            
+            <a href="resume.pdf" target="_blank" class="cv-link">curriculum vitae</a>
+        </div>
+    </div>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LKR76WWL4H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LKR76WWL4H');
+    </script>
+    
+    <script src="script.js"></script>
+</body>
 </html>
