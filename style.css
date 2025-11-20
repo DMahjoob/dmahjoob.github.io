@@ -222,6 +222,15 @@ body {
     line-height: 1.6;
 }
 
+.project-link {
+    text-decoration: none;
+    display: block;
+}
+
+.project-link:hover .project-card {
+    transform: translateX(10px);
+}
+
 .project-1 { background-color: #FF6666; }
 .project-2 { background-color: #FF9999; }
 .project-3 { background-color: #9c27b0; }
