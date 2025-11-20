@@ -115,22 +115,6 @@ body {
     font-weight: bold;
 }
 
-.indented-content {
-    padding-left: 40px;
-    position: relative;
-}
-
-.indented-content::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, #e91e63 0%, transparent 100%);
-    opacity: 0.3;
-}
-
 /* Tabs */
 .tabs {
     display: flex;
@@ -168,6 +152,22 @@ body {
 
 .tab-content.active {
     display: block;
+}
+
+.indented-content {
+    padding-left: 40px;
+    position: relative;
+}
+
+.indented-content::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #e91e63 0%, transparent 100%);
+    opacity: 0.3;
 }
 
 @keyframes fadeIn {
