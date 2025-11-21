@@ -9,6 +9,23 @@ body {
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.8;
+    position: relative;
+}
+
+/* Background image with opacity */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/azure.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.3; 
+    z-index: -1;
 }
 
 /* Hamburger Menu */
