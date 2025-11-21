@@ -24,7 +24,7 @@ body::before {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    opacity: 0.3; 
+    opacity: 0.15; 
     z-index: -1;
 }
 
@@ -115,10 +115,6 @@ body::before {
 .content {
     flex: 1;
     max-width: 700px;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .code-header {
@@ -267,10 +263,6 @@ body::before {
     position: sticky;
     top: 60px;
     margin-left: auto;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image {
